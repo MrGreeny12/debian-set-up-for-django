@@ -7,13 +7,19 @@ In this guide we will set up clean Ubuntu server for Python and Django projects.
 Connect through SSH to remote Ubuntu server and update repositories and install some initial needed packages:
 
 ```
-sudo apt-get update ; \
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -y vim mosh tmux htop git curl wget unzip zip gcc build-essential make
 ```
 
 Configure SSH:
+On your PC for copy ssh-keys:
+```
+ssh-copy-id имя_удаленного_пользователя@удаленный_IP_aдрес
+```
 
 ```
+sudo useradd viktor
 sudo vim /etc/ssh/sshd_config
     AllowUsers viktor
     PermitRootLogin no
@@ -48,7 +54,14 @@ vim ~/.zshrc
 
 ## Install python 3.9
 
+```
 mkdir ~/code
+```
+
+Check Python version in VPS:
+```
+python3 -V
+```
 
 Build from source python 3.9, install with prefix to ~/.python folder:
 
@@ -62,7 +75,7 @@ make -j8 ; \
 sudo make altinstall
 ```
 
-Now python3.7 in `/home/viktor/.python/bin/python3.9`. Update pip:
+Now python3.9 in `/home/viktor/.python/bin/python3.9`. Update pip:
 
 ```
 sudo /home/viktor/.python/bin/python3.9 -m pip install -U pip
