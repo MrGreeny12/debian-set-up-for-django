@@ -9,7 +9,7 @@ Connect through SSH to remote Ubuntu server and update repositories and install 
 ```
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install -y vim mosh tmux htop git curl wget unzip zip gcc build-essential make
+sudo apt-get install -y vim mosh tmux htop git curl wget unzip zip gcc build-essential make zsh tree
 ```
 
 Configure SSH:
