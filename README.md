@@ -54,25 +54,7 @@ mkdir ~/code
 
 Check Python version in VPS:
 ```
-python3 -V
-```
-
-Build from source python 3.9, install with prefix to ~/.python folder:
-
-```
-wget https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tgz ; \
-tar xvf Python-3.9.* ; \
-cd Python-3.9.12 ; \
-mkdir ~/.python ; \
-./configure --enable-optimizations --prefix=/home/viktor/.python ; \
-make -j8 ; \
-sudo make altinstall
-```
-
-Now python3.9 in `/home/viktor/.python/bin/python3.9`. Update pip:
-
-```
-sudo /home/viktor/.python/bin/python3.9 -m pip install -U pip
+[Install Python](https://www.linuxcapable.com/how-to-install-python-3-10-on-ubuntu-linux/#:~:text=Installing%20Python%203.10.%20To%20install,module%3A%20sudo%20apt%20install%20python3.10%2Ddev)
 ```
 
 Ok, now we can pull our project from Git repository (or create own), create and activate Python virtual environment:
