@@ -33,12 +33,6 @@ sudo service ssh restart
 sudo passwd viktor
 ```
 
-## Init — must-have packages & ZSH
-
-```
-sudo apt-get install -y zsh tree
-```
-
 Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
 
 ```
